@@ -17,7 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           )}
           ref={ref}
           {...props} />
-        <label htmlFor={props.id} className="absolute uppercase left-0 -top-3.5 text-zinc-400 transition-all text-sm peer-placeholder-shown:text-xs peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs">{props.placeholder}</label>
+        <label htmlFor={props.id} className="absolute uppercase left-0 -top-3.5 text-zinc-400 transition-all text-sm min-[1920px]:text-lg peer-placeholder-shown:text-xs min-[1920px]:peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs min-[1920px]:peer-focus:text-xs">{props.placeholder}</label>
       </div>
     )
   }
