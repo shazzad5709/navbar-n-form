@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-futura)'],
+      },
       transformOrigin: {
         0: "0%",
       },
