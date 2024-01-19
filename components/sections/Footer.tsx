@@ -3,6 +3,27 @@ import { AiOutlinePlus } from 'react-icons/ai'
 type Props = {}
 
 export default function Footer({ }: Props) {
+  const customerCareItems = [
+    'contacts', 'delivery and payments', 'return and refund', 'need help?', 'site map'
+  ]
+
+  
+  const handleCustomerCareClick = () => {
+    console.log('customer care clicked')
+  }
+
+  const handleLegalClick = () => {
+    console.log('legal clicked')
+  }
+
+  const HandleCorporateClick = () => {
+    console.log('corporate clicked')
+  }
+
+  const handleFollowClick = () => {
+    console.log('follow clicked')
+  }
+
   return (
     <div className='relative bg-black'>
       <div className='flex flex-col items-center pt-6 text-background border-t border-zinc-600 px-8'>
@@ -36,19 +57,19 @@ export default function Footer({ }: Props) {
         <div>Returns</div>
         <div className='flex gap-2'>
           <p>Customer Care</p>
-          <AiOutlinePlus className='text-sm text-muted-foreground pt-0.5' />
+          <AiOutlinePlus onClick={handleCustomerCareClick} className='text-sm text-muted-foreground pt-0.5' />
         </div>
         <div className='flex gap-2'>
           <p>Legal Area</p>
-          <AiOutlinePlus className='text-sm text-muted-foreground pt-0.5' />
+          <AiOutlinePlus onClick={handleLegalClick} className='text-sm text-muted-foreground pt-0.5' />
         </div>
         <div className='flex gap-2'>
           <p>Corporate</p>
-          <AiOutlinePlus className='text-sm text-muted-foreground pt-0.5' />
+          <AiOutlinePlus onClick={HandleCorporateClick} className='text-sm text-muted-foreground pt-0.5' />
         </div>
         <div className='flex gap-2'>
           <p>Follow us</p>
-          <AiOutlinePlus className='text-sm text-muted-foreground pt-0.5' />
+          <AiOutlinePlus onClick={handleFollowClick} className='text-sm text-muted-foreground pt-0.5' />
         </div>
       </div>
     </div>

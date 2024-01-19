@@ -49,7 +49,7 @@ export default function Home() {
     <div className={`bg-black overflow-x-hidden ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
       <div className='flex flex-col'>
         <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-        <Hero />
+        {/* <Hero /> */}
         <Footer />
       </div>
     </div>
