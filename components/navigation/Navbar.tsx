@@ -50,7 +50,7 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
             <div className='flex w-full px-8 py-6 justify-between'>
               <div className='space-x-6'>
                 {leftNavItems.map((item, index) => (
-                  <Link href={item.href} key={index} className={`hover:border-black hover:border-b-2 pb-1 ${item.active ? (scrolled? activeScroll : active) : ''}`}>
+                  <Link href={item.href} key={index} className={`hover:border-black hover:border-b-2 pb-1 ${item.active ? (scrolled ? activeScroll : active) : ''}`}>
                     {item.name}
                   </Link>
                 ))}
@@ -104,8 +104,34 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
                 ))}
               </div>
             </div>
-          </div><div className={`sticky flex top-0 px-4 justify-between w-full pt-6 pb-2 lg:hidden ${scrolled ? scroll : unscroll}`}>
-            <div className='text-2xl uppercase font-bold'>DOLCE<span className='text-sm font-bold px-1'>&</span>GABBANA</div>
+          </div><div className={`fixed z-10 flex top-0 px-6 justify-between w-full pt-6 pb-2 lg:hidden ${scrolled ? scroll : unscroll}`}>
+            {scrolled ?
+              <div>
+                <Image
+                  src='/Richie_Rich_Black_Logo.png'
+                  alt='Riche Rich'
+                  width={150}
+                  height={150}
+                  priority={true} />
+              </div>
+              :
+              <div>
+                <Image
+                  src='/Richie_Rich_White_Logo.png'
+                  alt='Riche Rich'
+                  width={150}
+                  height={150}
+                  priority={true}
+                  className='group-hover:hidden' />
+                <Image
+                  src='/Richie_Rich_Black_Logo.png'
+                  alt='Riche Rich'
+                  width={150}
+                  height={150}
+                  priority={true}
+                  className='hidden group-hover:block' />
+              </div>
+            }
             <div className='flex gap-x-2'>
               <Link href='/'><RiUserLine className='text-2xl' /></Link>
               <Link href='/'><BsBag className='text-2xl' /></Link>
@@ -114,9 +140,14 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
           </div>
         </>
         :
-        <div className='bg z-10-background h-screen flex-col items-center px-4 pt-6'>
+        <div className='bg-background h-screen flex-col items-center px-8 pt-6'>
           <div className='flex justify-between w-full'>
-            <div className='text-2xl uppercase font-bold'>DOLCE<span className='text-sm font-bold px-1'>&</span>GABBANA</div>
+            <Image
+              src='/Richie_Rich_Black_Logo.png'
+              alt='Riche Rich'
+              width={150}
+              height={150}
+              priority={true} />
             <AiOutlineClose onClick={toggleMenu} className='text-2xl hover:cursor-pointer' />
           </div>
           <div className='w-full flex justify-center pt-8 pl-8'>

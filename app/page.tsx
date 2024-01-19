@@ -4,6 +4,7 @@ import Footer from '@/components/sections/Footer'
 import Navbar from '@/components/navigation/Navbar'
 import { useState, useEffect, useRef } from 'react'
 import Hero from '@/components/sections/Hero'
+import Collections from '@/components/sections/Collections'
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false)
@@ -46,10 +47,11 @@ export default function Home() {
   }, [])
 
   return (
-    <div className={`bg-black overflow-x-hidden ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
+    <div className={`bg-background overflow-x-hidden ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
       <div className='flex flex-col'>
         <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-        {/* <Hero /> */}
+        <Hero />
+        <Collections />
         <Footer />
       </div>
     </div>
