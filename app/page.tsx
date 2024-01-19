@@ -1,8 +1,9 @@
 'use client'
 import Register from '@/components/auth-forms/Register'
-import Footer from '@/components/navigation/Footer'
+import Footer from '@/components/sections/Footer'
 import Navbar from '@/components/navigation/Navbar'
 import { useState, useEffect, useRef } from 'react'
+import Hero from '@/components/sections/Hero'
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false)
@@ -45,9 +46,9 @@ export default function Home() {
   }, [])
 
   return (
-    <div className={`bg-black h-screen ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
+    <div className={`bg-black ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
       <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      <Footer />
+      <Hero />
     </div>
     // <main className="flex min-h-screen flex-col py-24 px-8 md:px-32">
     //   <p className='uppercase font-light text-sm min-[1920px]:text-lg'>Personal Details</p>

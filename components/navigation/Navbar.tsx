@@ -5,6 +5,7 @@ import { BsBag, BsSearch } from "react-icons/bs";
 import { RiUserLine } from "react-icons/ri";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { IoChevronForward } from "react-icons/io5";
+import Image from 'next/image';
 
 type Props = {
   scrolled: boolean;
@@ -14,24 +15,24 @@ type Props = {
 
 export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
   const leftNavItems = [
-    { name: 'Fashion', href: '/', active: true },
-    { name: 'Beauty', href: '/', active: false },
-    { name: 'Casa', href: '/', active: false },
-    { name: 'Food&Beverage', href: '/', active: false },
-    { name: 'World', href: '/', active: false },
-    { name: 'Alta Moda', href: '/', active: false },
+    { name: 'Fashion', href: '/fashion', active: true },
+    { name: 'Beauty', href: '/beauty', active: false },
+    { name: 'Lifestyle', href: '/lifestyle', active: false },
+    { name: 'Blogs', href: '/blogs', active: false },
+    { name: 'New & Fresh', href: '/new-fresh', active: false },
+    { name: 'My Style', href: '/my-style', active: false },
   ];
 
   const rightNavItems = [
-    { name: 'Store Locator', href: '/' },
-    { name: 'Login', href: '/' },
+    { name: 'Store Locator', href: '/store-locator' },
+    { name: 'Login', href: '/login' },
   ];
 
   const centerNavItems = [
-    { name: 'Runway', href: '/' },
+    { name: 'Bags', href: '/' },
     { name: 'Women', href: '/' },
     { name: 'Men', href: '/' },
-    { name: 'DGVIB3', href: '/' },
+    { name: 'Trending', href: '/' },
     { name: 'Children', href: '/' },
     { name: 'Gifts', href: '/' },
   ];
@@ -39,16 +40,17 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
   const active = 'border-b-2 group-hover:border-black pb-1';
   const scroll = 'bg-background text-black ease-in-out duration-75';
   const unscroll = 'bg-transparent text-background ease-in-out';
+  const activeScroll = 'border-b-2 group-hover:border-black pb-1 border-black';
 
   return (
     <>
       {!isMenuOpen ?
         <>
-          <div className={`group sticky flex-col top-0 w-full text-xs hidden lg:flex justify-center pb-4 hover:bg-background hover:text-black ${scrolled ? scroll : unscroll}`}>
+          <div className={`group z-10 fixed flex-col top-0 w-full text-xs hidden lg:flex justify-center pb-4 hover:bg-background hover:text-black ${scrolled ? scroll : unscroll}`}>
             <div className='flex w-full px-8 py-6 justify-between'>
               <div className='space-x-6'>
                 {leftNavItems.map((item, index) => (
-                  <Link href={item.href} key={index} className={`hover:border-black hover:border-b-2 pb-1 ${item.active ? active : ''}`}>
+                  <Link href={item.href} key={index} className={`hover:border-black hover:border-b-2 pb-1 ${item.active ? (scrolled? activeScroll : active) : ''}`}>
                     {item.name}
                   </Link>
                 ))}
@@ -66,14 +68,34 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
                 <Link href='/' className='pb-1'><BsBag className='text-lg pb-1' /></Link>
               </div>
             </div>
-            <div className='flex flex-col w-full items-center space-y-4'>
+            <div className='flex flex-col w-full items-center gap-4'>
               {scrolled ?
-                <div className='text-4xl space-x-3'>
-                  <span className='absolute'>D</span>
-                  <span>G</span>
+                <div>
+                  <Image
+                    src='/Richie_Rich_Black_Logo.png'
+                    alt='Riche Rich'
+                    width={150}
+                    height={150}
+                    priority={true} />
                 </div>
                 :
-                <div className='text-8xl uppercase font-bold'>DOLCE<span className='text-5xl font-bold px-4'>&</span>GABBANA</div>}
+                <div>
+                  <Image
+                    src='/Richie_Rich_White_Logo.png'
+                    alt='Riche Rich'
+                    width={150}
+                    height={150}
+                    priority={true}
+                    className='group-hover:hidden' />
+                  <Image
+                    src='/Richie_Rich_Black_Logo.png'
+                    alt='Riche Rich'
+                    width={150}
+                    height={150}
+                    priority={true}
+                    className='hidden group-hover:block' />
+                </div>
+              }
               <div className='flex space-x-6'>
                 {centerNavItems.map((item, index) => (
                   <Link href={item.href} key={index} className='uppercase hover:border-black hover:border-b-2 pb-1'>
@@ -92,7 +114,7 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
           </div>
         </>
         :
-        <div className='bg-background h-screen flex-col items-center px-4 pt-6'>
+        <div className='bg z-10-background h-screen flex-col items-center px-4 pt-6'>
           <div className='flex justify-between w-full'>
             <div className='text-2xl uppercase font-bold'>DOLCE<span className='text-sm font-bold px-1'>&</span>GABBANA</div>
             <AiOutlineClose onClick={toggleMenu} className='text-2xl hover:cursor-pointer' />

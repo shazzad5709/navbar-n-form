@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-futura)'],
+        sans: ['var(--font-poppins)'],
       },
       transformOrigin: {
         0: "0%",
@@ -76,10 +76,17 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "img-slide": {
+          '0%, 22.22%': { transform: 'translateX(0%)' },
+          '33.33%, 55.56%': { transform: 'translateX(-25%)' },
+          '66.67%, 98,89%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(-75%)' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "img-slide": "img-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
       },
     },
   },
