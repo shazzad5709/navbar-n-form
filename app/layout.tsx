@@ -30,7 +30,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} font-sans`}>
         {children}
-        <Footer />
       </body>
     </html>
   )

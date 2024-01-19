@@ -24,14 +24,14 @@ export default function Hero({ }: Props) {
     const interval = setInterval(() => {
       setIndex((index) => (index + 1) % heroImages.length)
     }, 2000)
-    
+
     return () => clearInterval(interval)
   }, [])
 
 
   return (
-    <div className='flex h-screen bg-background text-foreground'>
-      <div key={index} className='absolute w-full h-screen'>
+    <div className='flex w-screen h-auto bg-background text-foreground'>
+      <div key={index} className='relative w-full h-100vh'>
         <img
           src={heroImages[index].src}
           alt={heroImages[index].alt}

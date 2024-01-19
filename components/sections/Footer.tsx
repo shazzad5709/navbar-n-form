@@ -4,7 +4,7 @@ type Props = {}
 
 export default function Footer({ }: Props) {
   return (
-    <div className=' bg-black'>
+    <div className='relative bg-black'>
       <div className='flex flex-col items-center pt-6 text-background border-t border-zinc-600 px-8'>
         <Image
           src='/Richie_Rich_White_Logo.png'
