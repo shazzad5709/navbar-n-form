@@ -72,10 +72,10 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
               {scrolled ?
                 <div>
                   <Image
-                    src='/Richie_Rich_Black_Logo.png'
+                    src='/Just_R_Black.png'
                     alt='Riche Rich'
-                    width={150}
-                    height={150}
+                    width={25}
+                    height={25}
                     priority={true} />
                 </div>
                 :
@@ -98,7 +98,7 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
               }
               <div className='flex space-x-6'>
                 {centerNavItems.map((item, index) => (
-                  <Link href={item.href} key={index} className='uppercase hover:border-black hover:border-b-2 pb-1'>
+                  <Link href={item.href} key={index} className='uppercase border-b-2 border-transparent hover:border-black pb-1'>
                     {item.name}
                   </Link>
                 ))}

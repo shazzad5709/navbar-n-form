@@ -24,9 +24,8 @@ export default function Collections({ }: Props) {
   return (
     <div className='p-16 flex flex-col gap-16'>
       {collections.map((_, i) => (
-        <div className='relative w-full h-auto rounded-md'>
+        <div key={i} className='relative w-full h-auto rounded-md'>
           <img
-            key={i}
             src={_.src}
             alt={_.alt}
             className="rounded-md"
