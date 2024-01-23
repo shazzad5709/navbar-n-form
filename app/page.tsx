@@ -5,6 +5,7 @@ import Navbar from '@/components/navigation/Navbar'
 import { useState, useEffect, useRef } from 'react'
 import Hero from '@/components/sections/Hero'
 import Collections from '@/components/sections/Collections'
+import Test from '@/components/Test'
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false)
@@ -49,10 +50,11 @@ export default function Home() {
   return (
     <div className={`bg-background overflow-x-hidden ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
       <div className='flex flex-col'>
-        <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+        {/* <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         <Hero />
         <Collections />
-        <Footer />
+        <Footer /> */}
+        <Test />
       </div>
     </div>
     // <main className="flex min-h-screen flex-col py-24 px-8 md:px-32">

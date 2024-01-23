@@ -29,12 +29,12 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
   ];
 
   const centerNavItems = [
-    { name: 'Bags', href: '/' },
-    { name: 'Women', href: '/' },
-    { name: 'Men', href: '/' },
-    { name: 'Trending', href: '/' },
-    { name: 'Children', href: '/' },
-    { name: 'Gifts', href: '/' },
+    { name: 'Bags', href: '/shop' },
+    { name: 'Women', href: '/shop' },
+    { name: 'Men', href: '/shop' },
+    { name: 'Trending', href: '/shop' },
+    { name: 'Children', href: '/shop' },
+    { name: 'Gifts', href: '/shop' },
   ];
 
   const active = 'border-b-2 group-hover:border-black pb-1';
