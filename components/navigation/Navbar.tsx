@@ -5,7 +5,6 @@ import { BsBag, BsSearch } from "react-icons/bs";
 import { RiUserLine } from "react-icons/ri";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { IoChevronForward } from "react-icons/io5";
-import Image from 'next/image';
 
 type Props = {
   scrolled: boolean;
@@ -71,28 +70,28 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
             <div className='flex flex-col w-full items-center gap-4'>
               {scrolled ?
                 <div>
-                  <Image
+                  <img
                     src='/Just_R_Black.png'
                     alt='Riche Rich'
                     width={25}
                     height={25}
-                    priority={true} />
+                     />
                 </div>
                 :
                 <div>
-                  <Image
+                  <img
                     src='/Richie_Rich_White_Logo.png'
                     alt='Riche Rich'
                     width={150}
                     height={150}
-                    priority={true}
+                    
                     className='group-hover:hidden' />
-                  <Image
+                  <img
                     src='/Richie_Rich_Black_Logo.png'
                     alt='Riche Rich'
                     width={150}
                     height={150}
-                    priority={true}
+                    
                     className='hidden group-hover:block' />
                 </div>
               }
@@ -107,28 +106,28 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
           </div><div className={`fixed z-10 flex top-0 px-6 justify-between w-full pt-6 pb-2 lg:hidden ${scrolled ? scroll : unscroll}`}>
             {scrolled ?
               <div>
-                <Image
+                <img
                   src='/Richie_Rich_Black_Logo.png'
                   alt='Riche Rich'
                   width={150}
                   height={150}
-                  priority={true} />
+                   />
               </div>
               :
               <div>
-                <Image
+                <img
                   src='/Richie_Rich_White_Logo.png'
                   alt='Riche Rich'
                   width={150}
                   height={150}
-                  priority={true}
+                  
                   className='group-hover:hidden' />
-                <Image
+                <img
                   src='/Richie_Rich_Black_Logo.png'
                   alt='Riche Rich'
                   width={150}
                   height={150}
-                  priority={true}
+                  
                   className='hidden group-hover:block' />
               </div>
             }
@@ -142,12 +141,12 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
         :
         <div className='bg-background h-screen flex-col items-center px-8 pt-6'>
           <div className='flex justify-between w-full'>
-            <Image
+            <img
               src='/Richie_Rich_Black_Logo.png'
               alt='Riche Rich'
               width={150}
               height={150}
-              priority={true} />
+               />
             <AiOutlineClose onClick={toggleMenu} className='text-2xl hover:cursor-pointer' />
           </div>
           <div className='w-full flex justify-center pt-8 pl-8'>
