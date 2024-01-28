@@ -75,7 +75,7 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
                     alt='Riche Rich'
                     width={25}
                     height={25}
-                     />
+                  />
                 </div>
                 :
                 <div>
@@ -84,14 +84,13 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
                     alt='Riche Rich'
                     width={150}
                     height={150}
-                    
+
                     className='group-hover:hidden' />
                   <img
                     src='/Richie_Rich_Black_Logo.png'
                     alt='Riche Rich'
                     width={150}
                     height={150}
-                    
                     className='hidden group-hover:block' />
                 </div>
               }
@@ -103,7 +102,8 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
                 ))}
               </div>
             </div>
-          </div><div className={`fixed z-10 flex top-0 px-6 justify-between w-full pt-6 pb-2 lg:hidden ${scrolled ? scroll : unscroll}`}>
+          </div>
+          <div className={`fixed z-10 flex top-0 px-6 justify-between w-full pt-6 pb-2 lg:hidden ${scrolled ? scroll : unscroll}`}>
             {scrolled ?
               <div>
                 <img
@@ -111,7 +111,7 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
                   alt='Riche Rich'
                   width={150}
                   height={150}
-                   />
+                />
               </div>
               :
               <div>
@@ -120,19 +120,19 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
                   alt='Riche Rich'
                   width={150}
                   height={150}
-                  
+
                   className='group-hover:hidden' />
                 <img
                   src='/Richie_Rich_Black_Logo.png'
                   alt='Riche Rich'
                   width={150}
                   height={150}
-                  
+
                   className='hidden group-hover:block' />
               </div>
             }
             <div className='flex gap-x-2'>
-              <Link href='/'><RiUserLine className='text-2xl' /></Link>
+              <Link href='/login'><RiUserLine className='text-2xl' /></Link>
               <Link href='/'><BsBag className='text-2xl' /></Link>
               <AiOutlineMenu className='text-2xl hover:cursor-pointer' onClick={toggleMenu} />
             </div>
@@ -146,7 +146,7 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
               alt='Riche Rich'
               width={150}
               height={150}
-               />
+            />
             <AiOutlineClose onClick={toggleMenu} className='text-2xl hover:cursor-pointer' />
           </div>
           <div className='w-full flex justify-center pt-8 pl-8'>

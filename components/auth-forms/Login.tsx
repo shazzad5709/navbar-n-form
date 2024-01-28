@@ -15,8 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { Checkbox } from "../ui/checkbox"
-import { Label } from "../ui/label"
+import Link from 'next/link'
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -33,7 +32,7 @@ const formSchema = z.object({
   }),
 })
 
-export default function Register() {
+export default function Login() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -80,31 +79,8 @@ export default function Register() {
                 <FormMessage />
               </FormItem>
             )} />
-          <FormField
-            control={form.control}
-            name="fname"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="first name" id="fname" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-          <FormField
-            control={form.control}
-            name="lname"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="last name" id="lname" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
           <div className="flex items-center space-x-5">
-            <Checkbox id="cookies" />
-            <Label htmlFor="cookies" className="font-light text-xs text-zinc-900">I have read and understood the <span className='font-bold'>Privacy </span>and<span className='font-bold'> Cookies Policy</span></Label>
+            <span className='font-light border-background border-b-2 pb-1'>- Not Registered? <Link href='/register' className='font-semibold pb-1 hover:border-foreground hover:border-b-2'>Register</Link> Now -</span>
           </div>
           <Button variant="outline" type="submit" className="w-full font-bold uppercase hover:text-muted-foreground">Submit</Button>
         </form>
