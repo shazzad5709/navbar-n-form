@@ -71,27 +71,23 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
               {scrolled ?
                 <div>
                   <img
-                    src='/Just_R_Black.png'
+                    src='/logo/Logo_Black.svg'
                     alt='Riche Rich'
                     width={25}
-                    height={25}
                   />
                 </div>
                 :
                 <div>
                   <img
-                    src='/Richie_Rich_White_Logo.png'
+                    src='/logo/Typo_white.svg'
                     alt='Riche Rich'
-                    width={150}
-                    height={150}
-
-                    className='group-hover:hidden' />
+                    width={280}
+                    className='group-hover:hidden my-[-117px]' />
                   <img
-                    src='/Richie_Rich_Black_Logo.png'
+                    src='/logo/Typo_Black.svg'
                     alt='Riche Rich'
-                    width={150}
-                    height={150}
-                    className='hidden group-hover:block' />
+                    width={280}
+                    className='hidden group-hover:block my-[-117px]' />
                 </div>
               }
               <div className='flex space-x-6'>
@@ -105,31 +101,18 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
           </div>
           <div className={`fixed z-10 flex top-0 px-6 justify-between w-full pt-6 pb-2 lg:hidden ${scrolled ? scroll : unscroll}`}>
             {scrolled ?
-              <div>
                 <img
-                  src='/Richie_Rich_Black_Logo.png'
+                  src='/logo/Typo_Black.svg'
                   alt='Riche Rich'
-                  width={150}
-                  height={150}
+                  width={280}
+                  className='my-[-117px] ml-[-60px] pb-2'
                 />
-              </div>
               :
-              <div>
                 <img
-                  src='/Richie_Rich_White_Logo.png'
+                  src='/logo/Typo_white.svg'
                   alt='Riche Rich'
-                  width={150}
-                  height={150}
-
-                  className='group-hover:hidden' />
-                <img
-                  src='/Richie_Rich_Black_Logo.png'
-                  alt='Riche Rich'
-                  width={150}
-                  height={150}
-
-                  className='hidden group-hover:block' />
-              </div>
+                  width={280}
+                  className='my-[-117px] ml-[-60px]' />
             }
             <div className='flex gap-x-2'>
               <Link href='/login'><RiUserLine className='text-2xl' /></Link>
@@ -142,10 +125,10 @@ export default function Navbar({ scrolled, isMenuOpen, toggleMenu }: Props) {
         <div className='bg-background h-screen flex-col items-center px-8 pt-6'>
           <div className='flex justify-between w-full'>
             <img
-              src='/Richie_Rich_Black_Logo.png'
+              src='/logo/Typo_Black.svg'
               alt='Riche Rich'
-              width={150}
-              height={150}
+              width={280}
+              className='my-[-117px] ml-[-60px]'
             />
             <AiOutlineClose onClick={toggleMenu} className='text-2xl hover:cursor-pointer' />
           </div>

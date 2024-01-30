@@ -6,12 +6,13 @@ export default function Footer({ }: Props) {
   return (
     <div className='relative bg-black'>
       <div className='flex flex-col items-center pt-6 text-background border-t border-zinc-600 px-8'>
-        <Image
-          src='/Richie_Rich_White_Logo.png'
-          alt='Riche Rich'
-          width={150}
-          height={150}
-          priority={true} />
+        <Link href='/'>
+          <img
+            src='/logo/Typo_white.svg'
+            alt='Riche Rich'
+            width={280}
+            className='group-hover:hidden my-[-117px]' />
+        </Link>
         <div className='flex w-full justify-between pt-4'>
           <div className='flex flex-col text-xs w-1/4'>
             <p className='uppercase tracking-[1px]'>Store Locator</p>

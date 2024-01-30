@@ -47,17 +47,13 @@ export default function Home() {
   }, [])
 
   return (
-    <div className={`bg-background overflow-x-hidden ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
+    <main className={`bg-background overflow-x-hidden ${isMenuOpen && 'overflow-y-hidden max-h-screen'}`}>
       <div className='flex flex-col'>
         <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         <Hero />
         <Collections />
         <Footer />
       </div>
-    </div>
-    // <main className="flex min-h-screen flex-col py-24 px-8 md:px-32">
-    //   <p className='uppercase font-light text-sm min-[1920px]:text-lg'>Personal Details</p>
-    //   <Register /> 
-    // </main>
+    </main>
   )
 }

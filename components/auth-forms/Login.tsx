@@ -49,12 +49,16 @@ export default function Login() {
 
   return (
     <div className="w-full md:w-1/2 lg:w-1/3  px-6 py-12 space-y-8">
-      <img
-        src='/Richie_Rich_Black_Logo.png'
-        alt='Riche Rich'
-        width={150}
-        height={150}
-      />
+      <div className='flex w-full justify-center'>
+        <Link href='/'>
+          <img
+            src='/logo/Typo_Black.svg'
+            alt='Riche Rich'
+            width={280}
+            className='my-[-117px]'
+          />
+        </Link>
+      </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
